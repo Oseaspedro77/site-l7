@@ -210,7 +210,7 @@ a {
 
     height: 100vh;
 
-    overflow: hidde;
+    overflow: hidden ;
 
     background: #000000;
 }
@@ -237,7 +237,7 @@ a {
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     object-position: center;
 
@@ -1304,15 +1304,18 @@ a {
     */
 
     .hero-bg-img {
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .hero-conteudo {
-        min-height: calc(100svh - 78px);
-
-        max-width: 480px;
-
-        padding: 40px 20px;
+          /* MUDANÇA: Remove o min-height fixo para o conteúdo não forçar espaço extra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 480px;
+    padding: 40px 20px;
+    z-index: 3; /* Garante que o texto fique acima do overlay */
     }
 
     .texto-p-overlay {

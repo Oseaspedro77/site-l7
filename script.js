@@ -962,11 +962,7 @@ if (
         }
     );
 
-
-    // -----------------------------------------------------
-    // FECHAR AO CLICAR
-    // -----------------------------------------------------
-
+    
     const linksMenu =
         menu.querySelectorAll(
             "a"
@@ -1016,6 +1012,49 @@ if (
     );
 
 }
+
+// =========================================================
+// FIM DO MENU MOBILE
+// =========================================================
+
+
+// =========================================================
+// BOTÃO WHATSAPP FLUTUANTE
+// O cliente deve preencher primeiro o formulário
+// =========================================================
+
+const botaoWhatsApp =
+    document.querySelector(".btn-whatsapp");
+
+const formularioAgendamento =
+    document.querySelector("#agendamento");
+
+
+if (
+    botaoWhatsApp &&
+    formularioAgendamento
+) {
+
+    botaoWhatsApp.addEventListener(
+        "click",
+        function (evento) {
+
+            evento.preventDefault();
+
+            alert(
+                "Para entrar em contacto pelo WhatsApp, preencha primeiro o formulário de agendamento."
+            );
+
+            formularioAgendamento.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+    );
+
+}
+
 
 
 // =========================================================
